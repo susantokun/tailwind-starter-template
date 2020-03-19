@@ -10,7 +10,7 @@ module.exports = {
       preset: "default"
     }),
     purgecss({
-      content: ['./src/**/*.html']
+      content: ['./public/**/*.html']
     }),
     autoprefixer
   ]

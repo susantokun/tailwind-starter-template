@@ -12,7 +12,6 @@ npm run dev
 
 ### Compiles and hot-reloads for production
 ```
-npm run build
 npm run prod
 ```
 

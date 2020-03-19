@@ -1,15 +1,15 @@
 {
   "name": "tailwind-starter-template",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A starter template for Tailwind CSS.",
   "main": "index.js",
   "scripts": {
-    "dev:build": "tailwind build tailwind.config.css -c tailwind.config.js -o src/css/style.css",
-    "dev": "npm run dev:build && live-server src --port=8081",
-    "prod:build:css": "postcss tailwind.config.css -o dist/css/style.min.css",
-    "prod:build:html": "html-minifier --input-dir ./src --output-dir ./dist --collapse-whitespace",
+    "dev:build": "tailwind build tailwind.config.css -c tailwind.config.js -o ./public/css/app.css",
+    "dev": "npm run dev:build && live-server ./public --port=8081",
+    "prod:build:css": "postcss tailwind.config.css -o ./dist/css/app.min.css",
+    "prod:build:html": "html-minifier --input-dir ./public --output-dir ./dist --collapse-whitespace",
     "build": "npm run prod:build:css && npm run prod:build:html",
-    "prod": "live-server dist --port=9091"
+    "prod": "npm run build && live-server ./dist --port=9091"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "cssnano": "^4.1.10",
     "html-minifier": "^4.0.0",
     "live-server": "^1.2.1",
-    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.2.0"
   }
 }
